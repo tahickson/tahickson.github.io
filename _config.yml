@@ -1,9 +1,10 @@
+theme: minima
 title: "Microbial Biosignatures Help Pages"
 description: "Documentation for this project"
 
 source: docs
 
-baseurl: "/microbialbiosignatures.github.io"
+baseurl: ""
 url: "https://tahickson.github.io"
 
 permalink: pretty
