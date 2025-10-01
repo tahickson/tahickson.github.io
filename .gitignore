@@ -1,0 +1,6 @@
+# Jekyll build output
+_site/
+
+# OS / Editor junk
+.DS_Store
+.vscode/
