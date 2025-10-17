@@ -27,7 +27,7 @@ It <i>is</i> that place to go to find out information about our progress on the 
 
     <!-- Right column: Second event placeholder -->
     <td style="vertical-align: top; width:50%; padding: 10px;">
-      <h2>Or, come to <a href="https://connects.geosociety.org/">GSA Connects, San Antonio</a></h2>
+      <h2>Welcome to <a href="https://connects.geosociety.org/">GSA Connects, San Antonio</a></h2>
       <p>
         We're also organizing a session at the Geological Society of America National Meeting in San Antonio:
         </p>
@@ -37,7 +37,7 @@ It <i>is</i> that place to go to find out information about our progress on the 
         Date and Time: Monday, October 20, 5:30-7:30
         </p>
         <p>
-        Location: TBA
+        Location: Grand Hyatt San Antonio Riverwalk, Lone Star D
         </p>
         </b>
       </p>
@@ -71,4 +71,4 @@ It <i>is</i> that place to go to find out information about our progress on the 
 <p>
 <a href="upload_files/DatabaseFlattened.xlsx">Use this link to access a flattened MS Excel file for use at the workshop.</a>
 </p>
-<a href="upload_files/Example.pdf">Use this link to access the example of a bioherm that we will use in the workshop.</a>
+<a href="upload_files/Example.pdf">Use this link</a> to access the example of a bioherm that we will use in the workshop. This is a bioherm from the Miocene (Serravallian) Lovell Wash Member of the Horse Spring Formation, a lacustrine carbonate unit from the Lake Mead region of southern Nevada</a>
