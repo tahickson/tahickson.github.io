@@ -71,3 +71,4 @@ It <i>is</i> that place to go to find out information about our progress on the 
 <p>
 <a href="upload_files/DatabaseFlattened.xlsx">Use this link to access a flattened MS Excel file for use at the workshop.</a>
 </p>
+<a href="upload_files/Example.pdf">Use this link to access the example of a bioherm that we will use in the workshop.</a>
