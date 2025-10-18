@@ -93,13 +93,13 @@ permalink: /about/
         integration with other paleobiology databases (API development),
         and improvements to schema and front-end.
       </td>
-      <td>September 2025</td>
+      <td>November/December 2025</td>
     </tr>
     <tr>
       <td>
         Workshop at Microbialites: Formation, Evolution, Diagenesis (M-FED) 2025 Conference, Hannover, Germany: <i>A Listening Session on the Development of an Open-Source Microbialites Database</i>
       </td>
-      <td>Early October 2025</td>
+      <td>COMPLETE</td>
     </tr>
     <tr class="pure-table-odd">
       <td>
@@ -107,15 +107,7 @@ permalink: /about/
       </td>
       <td>Late October 2025</td>
     </tr>
-    <tr>
-      <td>
-        Share initial database with scientific community at the
-        Geological Society of American National Meeting to get feedback
-        and encourage participation.
-      </td>
-      <td>October 2025</td>
-    </tr>
-    <tr class="pure-table-odd">
+      <tr>
       <td>
         Integrate comments from community and develop working PostgreSQL
         backend with dynamic, web-based front-end.
@@ -137,7 +129,7 @@ permalink: /about/
     Society and the Undergraduate Research Opportunities (UROP) program
   </li>
     <li>
-    Hickson gratefully acknowlegges financial supprt for this work from the Fulbright Senior Scholar Program, U.S. Department of State and the Spanish Fulbright Commission.
+    Hickson gratefully acknowledges financial supprt for this work from the Fulbright Senior Scholar Program, U.S. Department of State and the Spanish Fulbright Commission.
   </li>
   <li>
     Gustavus Adolphus College, Environment, Geography, and Earth

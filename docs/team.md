@@ -27,6 +27,7 @@ permalink: /team/
     Tommy Marrinan, Department of Computer and Information Sciences,
     University of St. Thomas
   </li>
+
 </ul>
 
 <h2>Undergraduate Researchers (to date)</h2>
@@ -49,6 +50,12 @@ permalink: /team/
     <li>
     Katrinna Deters, Department of Environment, Geography, and Earth Sciences, Gustavus Adolphus College, St. Peter, Minnesota
   </li>
+      <li>
+    Avery Wilson, Department of Biology, University of St. Thomas
+  </li>
+        <li>
+    Connor Ross, Department of Earth, Environment, and Society, University of St. Thomas
+  </li>
 </ul>
 <h2>Contributors</h2>
 <ul>
@@ -69,5 +76,8 @@ permalink: /team/
   </li>
   <li>
     Concha Arenas-Abad, Universidad de Zaragoza, Zaragoza, Spain
+  </li>
+    <li>
+    Laurane Fogret, Naturalis Biodiversity Center, Leiden, Netherlands
   </li>
 </ul>

@@ -12,27 +12,13 @@ It <i>is</i> that place to go to find out information about our progress on the 
 <hr>
 <table style="width:100%; table-layout: fixed;">
   <tr>
-    <!-- Left column: M-FED Flyer -->
-    <td style="vertical-align: top; width:50%; padding: 10px;">
-      <h2>
-        Join us at 
-        <a href="https://konferenz.uni-hannover.de/event/135/page/68-home">
-          M-FED 2025, Microbialites: Formation, Evolution, Diagenesis!!
-        </a>
-      </h2>
-      <p>
-        We will be hosting a <i>listening session on the development of an open-source microbialites database</i> at the M-FED conference, September 30–October 3, in Hannover, Germany.
-      </p>
-    </td>
-
-    <!-- Right column: Second event placeholder -->
-    <td style="vertical-align: top; width:50%; padding: 10px;">
+    <td style="vertical-align: top; width:100%; padding: 10px;">
       <h2>Welcome to <a href="https://connects.geosociety.org/">GSA Connects, San Antonio</a></h2>
       <p>
-        We're also organizing a session at the Geological Society of America National Meeting in San Antonio:
+        A session at the Geological Society of America National Meeting in San Antonio:
         </p>
         <p>
-        <b>An Open-Source Microbialites Database for the Geoscience Community: Mini-workshop and Listening Session
+        <b>An Microbial Biosignatures Database for the Geoscience Community: Mini-workshop and Listening Session
         <p>
         Date and Time: Monday, October 20, 5:30-7:30
         </p>
@@ -42,33 +28,17 @@ It <i>is</i> that place to go to find out information about our progress on the 
         </b>
       </p>
     </td>
-
   </tr>
 </table>
-<hr>
-<p>
-  We are a group of geoscientists working to create a database of
-  microbialite biosignatures. This includes:
-</p>
-
-<ul>
-  <li>Morphological characteristics</li>
-  <li>Textural traits</li>
-  <li>Geochemical properties</li>
-</ul>
-
-<p>
-  The traces of microbial metabolic processes in the rock record are, to
-  us, equivalent to primary sedimentary structures and/or trace fossils.
-  They require thorough, non-genetic descriptions that we can then interpret
-  in terms of physical, chemical and biological processes.
-  For this reason, our database makes extensive use of
-  <a href="upload_files/Handbook for the study and description of microbialites.pdf">
-    Handbook for the Study of Microbialites (Grey & Awramik, 2020)
-  </a>,
-  the first detailed non-genetic classification of microbialites to date.
-</p>
 <p>
 <a href="upload_files/DatabaseFlattened.xlsx">Use this link to access a flattened MS Excel file for use at the workshop.</a>
 </p>
 <a href="upload_files/Example.pdf">Use this link</a> to access the example of a bioherm that we will use in the workshop. This is a bioherm from the Miocene (Serravallian) Lovell Wash Member of the Horse Spring Formation, a lacustrine carbonate unit from the Lake Mead region of southern Nevada</a>
+<hr>
+<h2>NEWS</h2>
+<p>
+  Update on the workshop held at the M-FED conference, early October, Hannover, Germany.
+</p>
+<img src="upload_files/MFED25_Leibnizhaus.jpg" alt="M-FED 2025 Workshop at Leibnizhaus" style="max-width: 75%; height: auto;">
+<p>Along with Drs. Pierre Sansjofre (Paris Museum of Natural History) and Laurane Fogret (Naturalis Biodiversity Center), Hickson co-led a workshop to get feedback on this project at the Microbialites: Formation, Evolution, Diaganesis (M-FED) meeting. We shared a demo version of the web application, as well as the data entry portal currently configured in MS Access. Approximately half of meeting attendees chose to participate in this workshop, out of three offered. There was considerable interest and excitement about this project and we got excellent feedback about how to implement the database that we plan on integrating into the user experience. 
+</p>
