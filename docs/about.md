@@ -105,7 +105,7 @@ permalink: /about/
       <td>
         Workshop at GSA Connects, San Antonio <i>An Open-Source Microbialites Database for the Geoscience Community: Mini-workshop and Listening Session</i>
       </td>
-      <td>Late October 2025</td>
+      <td>COMPLETE</td>
     </tr>
       <tr>
       <td>
