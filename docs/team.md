@@ -59,25 +59,30 @@ permalink: /team/
 </ul>
 <h2>Contributors</h2>
 <ul>
+   <li>
+    Laurane Fogret, Naturalis Biodiversity Center, Leiden, Netherlands
+  </li> 
+  <li>
+  Catherine Fontana, University of Colorado, Boulder
   <li>
     Maribel Benito Moreno, Universidad Complutense de Madrid, Madrid, Spain
   </li>
   <li>
-    Pablo Suarez Gonzalez, Universidad Complutense de Madrid, Madrid, Spain
+  Juliana Olsen-Valdez, University of Colorado, Boulder
   </li>
   <li>
     Emma Quijada van den Berghe, Universidad de Oviedo, Oviedo, Spain
-  </li>
-  <li>
+  </li> 
+   <li>
     Pierre Sansjofre, Muséum National d'Histoire Naturelle, Paris, France
   </li>
   <li>
     Esther Sanz-Montero, Universidad Complutense de Madrid, Madrid, Spain
+  </li> 
+  <li>
+    Pablo Suarez Gonzalez, Universidad Complutense de Madrid, Madrid, Spain
   </li>
   <li>
-    Concha Arenas-Abad, Universidad de Zaragoza, Zaragoza, Spain
+  Adam Woods, Cal State University, Fullerton
   </li>
-    <li>
-    Laurane Fogret, Naturalis Biodiversity Center, Leiden, Netherlands
-  </li>
-</ul>
+
