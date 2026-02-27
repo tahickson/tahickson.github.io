@@ -18,7 +18,7 @@ permalink: /about/
   Additionally, it is clear that microbialite sedimentologists
   lack a common, non-genetic, descriptive vocabulary for these
   important sedimentary features. That is until 2020, when Kath Grey and Stan Awramik published their
-  <a href="upload_files/Handbook%20for%20the%20study%20and%20description%20of%20microbialites.pdf">
+<a href="/docs/upload_files/Handbook%20for%20the%20study%20and%20description%20of%20microbialites.pdf">
   Handbook for the Study of Microbialites
 </a>. This free, online text provides an ideal starting point for the
   creation of a controlled vocabulary that geologists can use to
