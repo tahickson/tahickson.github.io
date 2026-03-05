@@ -92,7 +92,7 @@ permalink: /about/
         integration with other paleobiology databases (API development),
         and improvements to schema and front-end.
       </td>
-      <td>November/December 2025</td>
+      <td>COMPLETE</td>
     </tr>
     <tr>
       <td>
