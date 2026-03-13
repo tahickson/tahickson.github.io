@@ -20,7 +20,7 @@ permalink: /working_group/
 <ol>
   <li>February 13, Session 1: Projects, Collections, and Published Literature: Metadata that describes the big picture for our samples. <a href="https://drive.google.com/drive/folders/1D5EUs_L8X5XB7aOYsxD-r0F5GOMwIYSd?usp=sharing" target="_blank">Meeting Minutes and Video Recording</a></li>
   <li>February 27, Session 2: Non-genetic Descriptors of Megastructures and Macrostructure: Metadata that describes the largest microbialite features.<a href="https://drive.google.com/drive/folders/1D5EUs_L8X5XB7aOYsxD-r0F5GOMwIYSd?usp=sharing" target="_blank">Meeting Minutes and Video Recording</a></li></li>
-  <li>March 13, Session 3: Non-genetic Descriptors of Mesostructures: Metadata that describes microbialite features at the hand-sample scale; the building blocks of larger structures.</li>
+  <li>March 13, Session 3: Non-genetic Descriptors of Mesostructures: Metadata that describes microbialite features at the hand-sample scale; the building blocks of larger structures.<a href="https://docs.google.com/document/d/1aevmYlDHA8Gp2nVELd8LkNXEETRCDPLsQhWbajDttik/edit?usp=sharing" target="_blank">Meeting Minutes and Video Recording</a></li>
   <li>March 27, Session 4: Non-genetic Descriptors of Microstructures: Can we develop a microfacies classification?</li>
   <li>Future topics: Integrating geochemical and molecular genomic data</li>
 </ol>
