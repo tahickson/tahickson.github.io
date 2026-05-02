@@ -3,7 +3,18 @@ layout: default
 title: "The Microbial Biosignatures Project: Working Group Meetings"
 permalink: /working_group/
 ---
-
+<style>
+  /* Target the list items in your ordered list */
+  ol li {
+    border-bottom: 1px solid #ddd; /* Creates a light gray line */
+    padding: 12px 0;               /* Adds vertical space around each entry */
+    list-style-position: inside;   /* Optional: keeps numbers aligned with text */
+  }
+    /* Remove the line from the very last entry */
+  ol li:last-child {
+    border-bottom: none;
+  }
+</style>
 <h1>Working Group Meetings</h1>
 
 <p>
@@ -19,7 +30,7 @@ permalink: /working_group/
 </p>
 <ol>
   <li>February 13, Session 1: Projects, Collections, and Published Literature: Metadata that describes the big picture for our samples. <a href="https://drive.google.com/drive/folders/1D5EUs_L8X5XB7aOYsxD-r0F5GOMwIYSd?usp=sharing" target="_blank">Meeting Minutes and Video Recording</a></li>
-  <li>February 27, Session 2: Non-genetic Descriptors of Megastructures and Macrostructure: Metadata that describes the largest microbialite features.<a href="https://drive.google.com/drive/folders/1D5EUs_L8X5XB7aOYsxD-r0F5GOMwIYSd?usp=sharing" target="_blank">Meeting Minutes and Video Recording</a></li></li>
+  <li>February 27, Session 2: Non-genetic Descriptors of Megastructures and Macrostructure: Metadata that describes the largest microbialite features.<a href="https://drive.google.com/drive/folders/1D5EUs_L8X5XB7aOYsxD-r0F5GOMwIYSd?usp=sharing" target="_blank">Meeting Minutes and Video Recording</a></li>
   <li>March 13, Session 3: Non-genetic Descriptors of Mesostructures: Metadata that describes microbialite features at the hand-sample scale; the building blocks of larger structures.<a href="https://docs.google.com/document/d/1aevmYlDHA8Gp2nVELd8LkNXEETRCDPLsQhWbajDttik/edit?usp=sharing" target="_blank">Meeting Minutes and Video Recording</a></li>
   <li>March 27, Session 4: Non-genetic Descriptors of Microstructures: Can we develop a microfacies classification? <a href="https://docs.google.com/document/d/1epI2h1HXGa0ci8t87GuGg7YHkVxABcTEuLhCBw2-DDQ/edit?usp=sharing" target="_blank">Meeting Minutes and Video Recording</a></li>
   <li>April 10, Session 5: Establishing and adopting the data governance charter and a tiered deployment plan (with issues of intended audience and more) <a href="https://docs.google.com/document/d/1cZHiG38ybSzKVzZ5YB5smyFTmgGZR9f4er9zfxUF_Hs/edit?usp=sharing" target="_blank">Meeting Minutes</a></li>
