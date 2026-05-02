@@ -35,7 +35,7 @@ permalink: /working_group/
   <li>March 27, Session 4: Non-genetic Descriptors of Microstructures: Can we develop a microfacies classification? <a href="https://docs.google.com/document/d/1epI2h1HXGa0ci8t87GuGg7YHkVxABcTEuLhCBw2-DDQ/edit?usp=sharing" target="_blank">Meeting Minutes and Video Recording</a></li>
   <li>April 10, Session 5: Establishing and adopting the data governance charter and a tiered deployment plan (with issues of intended audience and more) <a href="https://docs.google.com/document/d/1cZHiG38ybSzKVzZ5YB5smyFTmgGZR9f4er9zfxUF_Hs/edit?usp=sharing" target="_blank">Meeting Minutes</a></li>
 <li>April 24, Session 6: Invited Guest <b>Erik Sperling</b> (Stanford University) will join us to discuss how the <a href="https://sgp.stanford.edu/"> Sedimentary Geochemistry and Paleoenvironments Project </a>works and what we can learn from his experience. <a href="https://docs.google.com/document/d/1DoQLmO0MHc9bIwJZaKecVfSbcrywAOflHnbYggvFfXE/edit?usp=sharing">Meeting Minutes</a></li>
-<li>What should a data ingestion workflow look like, practically-speaking?
+<li>May 8, Session 7: What should a data ingestion workflow look like, practically-speaking?
 <li>Tufas, Travertines, and other spring-related microbially induced sedimentary structures (Thomas?)
 <li>Thrombolites and Leiolites
 <li>Results of the Microfacies Expert Input Tool and crowd-sourcing microtextures
