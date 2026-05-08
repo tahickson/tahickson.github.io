@@ -21,7 +21,7 @@ permalink: /working_group/
   As we develop the project we are convening open working group sessions, generally every other week, to discuss a wide range of aspects of the database. We hope to include technical, scientific, and freeform discussion in these meetings. Our plan is to make videos or transcripts available here.
 </p>
 <H1><b>Sessions</b></h1>
-<p align="center"><b>All sessions held 10-11:00 am (CST)(GMT UTC-6)</b></p>
+<p align="center"><b>All sessions held 10-11:00 am (CST)(GMT UTC-5)</b></p>
 <p style="text-align: center;">
   Join on Zoom from this link:
   <a href="https://stthomas.zoom.us/j/92844255681" target="_blank">
