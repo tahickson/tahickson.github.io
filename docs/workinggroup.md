@@ -36,7 +36,7 @@ permalink: /working_group/
   <li>April 10, Session 5: Establishing and adopting the data governance charter and a tiered deployment plan (with issues of intended audience and more) <a href="https://docs.google.com/document/d/1cZHiG38ybSzKVzZ5YB5smyFTmgGZR9f4er9zfxUF_Hs/edit?usp=sharing" target="_blank">Meeting Minutes</a></li>
 <li>April 24, Session 6: Invited Guest <b>Erik Sperling</b> (Stanford University) will join us to discuss how the <a href="https://sgp.stanford.edu/"> Sedimentary Geochemistry and Paleoenvironments Project </a>works and what we can learn from his experience. <a href="https://docs.google.com/document/d/1DoQLmO0MHc9bIwJZaKecVfSbcrywAOflHnbYggvFfXE/edit?usp=sharing">Meeting Minutes</a></li>
 <li>May 8, Session 7: What should a data ingestion workflow look like, practically-speaking? <a href="https://docs.google.com/document/d/1Z9eZ6KtioY_Eyu1D2FeE8jcUzye1ujCPsugMOR5_A0c/edit?usp=sharing">Meeting Minutes</a></li>
-<li>Tufas, Travertines, and other spring-related microbially induced sedimentary structures (Thomas?)
+<li>Problematic deposits: addressing the morphology and textures of tufa and travertine in spring systems (Thomas Garner, Ulster University)
 <li>Thrombolites and Leiolites
 <li>Results of the Microfacies Expert Input Tool and crowd-sourcing microtextures
 <li>Developing sub-groups or topical groups to move forward on different aspects of the project
