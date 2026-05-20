@@ -62,9 +62,11 @@ permalink: /controlled_vocab/
   }
 
   .domain {
-    white-space: nowrap;
+    min-width: 150px;
+    max-width: 220px;
+    white-space: normal;
     font-family: inherit;
-    font-size: 0.88rem;
+    font-size: 0.9rem;
   }
 
   .term {
