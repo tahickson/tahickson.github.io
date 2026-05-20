@@ -37,6 +37,10 @@ permalink: /team/
     University of St. Thomas
   </li>
   <li>
+    James Faul, Department of Computer and Information Sciences,
+    University of St. Thomas
+  </li>
+  <li>
     Anna Curtler, Department of Computer and Information Sciences,
     University of St. Thomas
   </li>

@@ -76,7 +76,7 @@ permalink: /about/
         on the database. What is working? What needs improvement? What
         features are missing?
       </td>
-      <td>IN PROGRESS</td>
+      <td>COMPLETE</td>
     </tr>
     <tr>
       <td>
@@ -84,7 +84,7 @@ permalink: /about/
         computer science team members and undergraduate computer science
         students.
       </td>
-      <td>IN PROGRESS</td>
+      <td>COMPLETE</td>
     </tr>
     <tr class="pure-table-odd">
       <td>
@@ -113,6 +113,14 @@ permalink: /about/
       </td>
       <td>Spring and Summer, 2026</td>
     </tr>
+    <tr class="pure-table-odd">
+      <td>
+        Hold bi-weekly
+        <a href="{{ '/working_group/' | relative_url }}">working group sessions</a>
+        open to the community to get input on database design.
+      </td>
+      <td>On-going</td>
+    </tr>
   </tbody>
 </table>
 
@@ -128,7 +136,10 @@ permalink: /about/
     Society and the Undergraduate Research Opportunities (UROP) program
   </li>
     <li>
-    Hickson gratefully acknowledges financial supprt for this work from the Fulbright Senior Scholar Program, U.S. Department of State and the Spanish Fulbright Commission.
+    Fulbright Senior Scholar Program, U.S. Department of State and the Spanish Fulbright Commission, for Hickson.
+  </li>
+      <li>
+    Petroleum Research Fund Grant 54934, Reservoir Heterogeneity and Facies Characterization of Rift Basin Microbial Carbonate Lakes: Insights from the Miocene Horse Spring Formation and the Modern Lower Pahranagat Lake (PI: Hickson; co-PI: Kevin Theissen)
   </li>
   <li>
     Gustavus Adolphus College, Environment, Geography, and Earth
