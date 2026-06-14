@@ -67,8 +67,10 @@ permalink: /team/
 <img src="{{ '/images/team/charlotte.jpg' | relative_url }}" alt="Charlotte Spruzen" class="board-photo">
 <div class="board-card-body">
 <h3>Charlotte Spruzen</h3>
+<p class="board-role">PhD candidate</p>
 <p>McGill University<br>Department of Earth and Planetary Sciences</p>
 <p><a href="mailto:charlotte.spruzen@mail.mcgill.ca">charlotte.spruzen@mail.mcgill.ca</a></p>
+<p><strong>Research interests:</strong> Field geology and petrography, with a particular focus on the under-recognized diversity of non-stromatolitic microbialites; Precambrian sedimentology and stratigraphy; science communication (@charbonate).</p>
 </div>
 </div>
 
