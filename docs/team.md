@@ -78,9 +78,10 @@ permalink: /team/
 <img src="{{ '/images/team/pablo.JPG' | relative_url }}" alt="Pablo Suarez-Gonzalez" class="board-photo">
 <div class="board-card-body">
 <h3>Pablo Suarez-Gonzalez</h3>
+<p class="board-role">Professor</p>
 <p>Complutense University of Madrid</p>
 <p><a href="mailto:pablosuarez@ucm.es">pablosuarez@ucm.es</a></p>
-<p><strong>Research interests:</strong> sedimentology and basin analysis of carbonate units with unusual abundance and diversity of microbialites; relationships between microbial communities and sedimentary processes in modern, Triassic, and other microbialite systems; microbialites, ooids, and sedimentary deposits throughout the stratigraphic record.</p>
+<p><strong>Research interests:</strong> Sedimentology and basin analysis; field geology and petrography; micrbobialites and relationships between microbial communities and sedimentary processes throughout the stratigraphic record; mineral precipitation associated with microbial communities; ooids and their relationship with microbialites.</p>
 </div>
 </div>
 </div>
