@@ -32,6 +32,17 @@ permalink: /team/
 </div>
 
 <div class="board-card">
+<img src="{{ '/images/team/Lauren.jpg' | relative_url }}" alt="Laurane Fogret" class="board-photo">
+<div class="board-card-body">
+<h3>Laurane Fogret</h3>
+<p class="board-role">Postdoctoral Researcher</p>
+<p>Naturalis Biodiversity Center<br>the Netherlands</p>
+<p><a href="mailto:laurane.fogret@naturalis.nl">laurane.fogret@naturalis.nl</a></p>
+<p>Laurane Fogret is a postdoctoral researcher at the Naturalis Biodiversity Center, Netherlands. Her work focuses on the co-evolution of life and Earth’s surface environments, specializing in the field-based recognition and interpretation of stromatolites. By integrating detailed textural observations with elemental and isotopic geochemistry, she investigates the mechanisms of carbonate precipitation and the preservation of biological signatures in the geological record. Her work aims to decipher the complex chemical and microbial signals that define these ancient archives of life.</p>
+</div>
+</div>
+
+<div class="board-card">
 <img src="{{ '/images/team/tom.jpg' | relative_url }}" alt="Thomas Hickson" class="board-photo">
 <div class="board-card-body">
 <h3>Thomas Hickson</h3>
@@ -94,7 +105,6 @@ permalink: /team/
 <ul>
 <li>Pakeeza Akram, Department of Computer and Information Sciences, University of St. Thomas</li>
 <li>Tommy Marrinan, Department of Computer and Information Sciences, University of St. Thomas</li>
-<li>Laurane Fogret, Naturalis Biodiversity Center, Leiden, Netherlands</li>
 <li>Maribel Benito Moreno, Universidad Complutense de Madrid, Madrid, Spain</li>
 <li>Emma Quijada van den Berghe, Universidad de Oviedo, Oviedo, Spain</li>
 <li>Pierre Sansjofre, Muséum National d'Histoire Naturelle, Paris, France</li>

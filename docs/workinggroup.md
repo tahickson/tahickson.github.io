@@ -39,5 +39,5 @@ permalink: /working_group/
 <li>May 8, Session 7: What should a data ingestion workflow look like, practically-speaking? <a href="https://docs.google.com/document/d/1Z9eZ6KtioY_Eyu1D2FeE8jcUzye1ujCPsugMOR5_A0c/edit?usp=sharing">Meeting Minutes</a></li>
 <li>May 22, Session 8: Problematic deposits: addressing the morphology and textures of tufa and travertine in spring systems (Thomas Garner, Ulster University)<a href="https://docs.google.com/document/d/1RBw0InlYA0Lbx_ivsfhWlvWHnf8BWnBILEYeGSSDCwI/edit?usp=drive_link"> Meeting Minutes</a></li>
 <li>June 5, Session 9: Biogenicity indicators and addressing the term "microbialite" <a href="https://docs.google.com/document/d/1GLyDJmwCOP5zsHgp0EenY-PANrilkjF1Yls2ii--s5I/edit?usp=sharing">Meeting Minutes</a></li>
-<li>June 19, Session 10: A better data ingestion workflow inspired by Pablo! <a href="https://docs.google.com/document/d/1ePzvOK4wkKHM2InSXNCYCdQJ1VAfsTWhcvi6LnrAZt0/edit?usp=drive_link">Agenda</a></li>
+<li>June 19, Session 10: A better data ingestion workflow inspired by Pablo! <a href="https://docs.google.com/document/d/1ePzvOK4wkKHM2InSXNCYCdQJ1VAfsTWhcvi6LnrAZt0/edit?usp=drive_link">Meeting Minutes</a></li>
 </ol>
