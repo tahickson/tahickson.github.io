@@ -21,3 +21,17 @@ permalink: /code_apis/
 <p>
   This resource documents the working descriptive terminology, operational definitions, source provenance, and vocabulary structure currently being developed for the database and associated ontology framework.
 </p>
+
+<h2>Database Schema</h2>
+
+<p>
+  Browse automatically generated SchemaSpy documentation for the live
+  MicrobialitesDB PostgreSQL schema, including tables, columns, constraints,
+  and relationships.
+</p>
+
+<p>
+  <a href="{{ '/database-schema/' | relative_url }}">
+    MicrobialitesDB Schema Documentation
+  </a>
+</p>
