@@ -1,0 +1,2609 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>v_export_master - microbialitesDB_Backend.microbialitesdb</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>microbialitesDB_Backend</b></a><span class="navbar-brand" style="padding-left: 0">.microbialitesdb</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>v_export_master</h1><p><span id="recordNumber">0</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="project_projectid">project_projectid</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="v_export_master.project_projectid&#39;s name implies that it&#39;s a child of tbl_projectdata.projectid, but it doesn&#39;t reference that column."><a href='tbl_projectdata.html'>tbl_projectdata</a><span class='relatedKey'>.projectid</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="project_projectname">project_projectname</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="project_principalinvestigator">project_principalinvestigator</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="project_siteorlocationname">project_siteorlocationname</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="project_startdate">project_startdate</span></td>
+                                    <td>date</td>
+                                    <td>13</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="project_enddate">project_enddate</span></td>
+                                    <td>date</td>
+                                    <td>13</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="project_instrumentsused">project_instrumentsused</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="project_orcid">project_orcid</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="project_otherteammembers">project_otherteammembers</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="project_areaofinterest">project_areaofinterest</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="project_purposeofstudy">project_purposeofstudy</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="project_fundingsource">project_fundingsource</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="project_grantid">project_grantid</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="project_projecttectonicsetting">project_projecttectonicsetting</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="mega_megastructureid">mega_megastructureid</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="v_export_master.mega_megastructureid&#39;s name implies that it&#39;s a child of tbl_megastructuredata.megastructureid, but it doesn&#39;t reference that column."><a href='tbl_megastructuredata.html'>tbl_megastructuredata</a><span class='relatedKey'>.megastructureid</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="mega_projectid">mega_projectid</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="v_export_master.mega_projectid&#39;s name implies that it&#39;s a child of tbl_projectdata.projectid, but it doesn&#39;t reference that column."><a href='tbl_projectdata.html'>tbl_projectdata</a><span class='relatedKey'>.projectid</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="mega_citationgroupid">mega_citationgroupid</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="v_export_master.mega_citationgroupid&#39;s name implies that it&#39;s a child of tbl_citationgroup.citationgroupid, but it doesn&#39;t reference that column."><a href='tbl_citationgroup.html'>tbl_citationgroup</a><span class='relatedKey'>.citationgroupid</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_megasampleid_local">mega_megasampleid_local</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_megasampleid_sesar">mega_megasampleid_sesar</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_datesamplecollected">mega_datesamplecollected</span></td>
+                                    <td>date</td>
+                                    <td>13</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_fieldbook">mega_fieldbook</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_fieldbookpage">mega_fieldbookpage</span></td>
+                                    <td>varchar</td>
+                                    <td>50</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_fieldwaypointname">mega_fieldwaypointname</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_latitude">mega_latitude</span></td>
+                                    <td>numeric</td>
+                                    <td>13,10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_longitude">mega_longitude</span></td>
+                                    <td>numeric</td>
+                                    <td>13,10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_elevation">mega_elevation</span></td>
+                                    <td>numeric</td>
+                                    <td>8,3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_supergroup">mega_supergroup</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_group">mega_group</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_formation">mega_formation</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_member">mega_member</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_timescaleage">mega_timescaleage</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_geochronage">mega_geochronage</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_geochronageerror">mega_geochronageerror</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_geochronagebasis">mega_geochronagebasis</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_megacomplete">mega_megacomplete</span></td>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_megaismacro">mega_megaismacro</span></td>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_linnaeanname">mega_linnaeanname</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_notes">mega_notes</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_section_name">mega_section_name</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_total_sect_thickness_m">mega_total_sect_thickness_m</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_sample_height_in_section_m">mega_sample_height_in_section_m</span></td>
+                                    <td>numeric</td>
+                                    <td>8,3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_megabuildupinterface">mega_megabuildupinterface</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_megabuilduptype">mega_megabuilduptype</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_megadepositionalsetting">mega_megadepositionalsetting</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_megahorizontalscale">mega_megahorizontalscale</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_megainitiation">mega_megainitiation</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_megasedinterface">mega_megasedinterface</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_megasubstrate">mega_megasubstrate</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_megaverticalscale">mega_megaverticalscale</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_lat_long">mega_lat_long</span></td>
+                                    <td>geography</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_location_desc">mega_location_desc</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_megalat_long_quality">mega_megalat_long_quality</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="mega_collectionid">mega_collectionid</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="v_export_master.mega_collectionid&#39;s name implies that it&#39;s a child of tbl_collections.collectionid, but it doesn&#39;t reference that column."><a href='tbl_collections.html'>tbl_collections</a><span class='relatedKey'>.collectionid</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_lithology">mega_lithology</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_megastructureshape">mega_megastructureshape</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mega_microbialitetypes">mega_microbialitetypes</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="macro_macrostructureid">macro_macrostructureid</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="v_export_master.macro_macrostructureid&#39;s name implies that it&#39;s a child of tbl_macrostructuredata.macrostructureid, but it doesn&#39;t reference that column."><a href='tbl_macrostructuredata.html'>tbl_macrostructuredata</a><span class='relatedKey'>.macrostructureid</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="macro_megastructureid">macro_megastructureid</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="v_export_master.macro_megastructureid&#39;s name implies that it&#39;s a child of tbl_megastructuredata.megastructureid, but it doesn&#39;t reference that column."><a href='tbl_megastructuredata.html'>tbl_megastructuredata</a><span class='relatedKey'>.megastructureid</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_sampleid">macro_sampleid</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_macroismeso">macro_macroismeso</span></td>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_sampleid_sesar">macro_sampleid_sesar</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_macrocomplete">macro_macrocomplete</span></td>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_macroaspectratio">macro_macroaspectratio</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_macroattitude">macro_macroattitude</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_macrogrowthvariability">macro_macrogrowthvariability</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_macrolinkage">macro_macrolinkage</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_macrospacing">macro_macrospacing</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_macrosampleid_local">macro_macrosampleid_local</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_branchingmode">macro_branchingmode</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_branchingstyle">macro_branchingstyle</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_columnshape">macro_columnshape</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_conicalshapes">macro_conicalshapes</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_divergenceangle">macro_divergenceangle</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_domeshape">macro_domeshape</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_layershape">macro_layershape</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_planview">macro_planview</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="macro_shape">macro_shape</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="meso_mesostructureid">meso_mesostructureid</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="v_export_master.meso_mesostructureid&#39;s name implies that it&#39;s a child of tbl_mesostructuredata.mesostructureid, but it doesn&#39;t reference that column."><a href='tbl_mesostructuredata.html'>tbl_mesostructuredata</a><span class='relatedKey'>.mesostructureid</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="meso_macrostructureid">meso_macrostructureid</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="v_export_master.meso_macrostructureid&#39;s name implies that it&#39;s a child of tbl_macrostructuredata.macrostructureid, but it doesn&#39;t reference that column."><a href='tbl_macrostructuredata.html'>tbl_macrostructuredata</a><span class='relatedKey'>.macrostructureid</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_sampleid">meso_sampleid</span></td>
+                                    <td>varchar</td>
+                                    <td>50</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_sampleid_sesar">meso_sampleid_sesar</span></td>
+                                    <td>varchar</td>
+                                    <td>50</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_mesolamthickness">meso_mesolamthickness</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_mesowavelength">meso_mesowavelength</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_notes">meso_notes</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_infru">meso_infru</span></td>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_researcheranalyst">meso_researcheranalyst</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_mesocomplete">meso_mesocomplete</span></td>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_mesoclothierarchy">meso_mesoclothierarchy</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_mesolaminainheritance">meso_mesolaminainheritance</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_mesolatcontinuity">meso_mesolatcontinuity</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_mesomodalityskewness">meso_mesomodalityskewness</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_mesosynopticrelief">meso_mesosynopticrelief</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_mesowalls">meso_mesowalls</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_mesosampleid_local">meso_mesosampleid_local</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_alternation">meso_alternation</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_architecture">meso_architecture</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_clotshape">meso_clotshape</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_graintypes">meso_graintypes</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_lampattern">meso_lampattern</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_lamprofile">meso_lamprofile</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_lamwaviness">meso_lamwaviness</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_macrolaminae">meso_macrolaminae</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_oncoidflattening">meso_oncoidflattening</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_oncoids">meso_oncoids</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_oncoidshape">meso_oncoidshape</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_stackingoverlap">meso_stackingoverlap</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="meso_types">meso_types</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="micro_microstructureid">micro_microstructureid</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="v_export_master.micro_microstructureid&#39;s name implies that it&#39;s a child of tbl_microstructuredata.microstructureid, but it doesn&#39;t reference that column."><a href='tbl_microstructuredata.html'>tbl_microstructuredata</a><span class='relatedKey'>.microstructureid</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="micro_mesostructureid">micro_mesostructureid</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="v_export_master.micro_mesostructureid&#39;s name implies that it&#39;s a child of tbl_mesostructuredata.mesostructureid, but it doesn&#39;t reference that column."><a href='tbl_mesostructuredata.html'>tbl_mesostructuredata</a><span class='relatedKey'>.mesostructureid</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_sampleid">micro_sampleid</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_subsample">micro_subsample</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_porositypercentest">micro_porositypercentest</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_cementfilledporosity">micro_cementfilledporosity</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_micronotes">micro_micronotes</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_microsampleid_local">micro_microsampleid_local</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_microsampleid_sesar">micro_microsampleid_sesar</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_microreferenceimage">micro_microreferenceimage</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_microcomplete">micro_microcomplete</span></td>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_txtmicronotes">micro_txtmicronotes</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_microwentworth">micro_microwentworth</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_micropercentclastics">micro_micropercentclastics</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_carbonategrains">micro_carbonategrains</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_cementtypes">micro_cementtypes</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_clasticgrains">micro_clasticgrains</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_microfacies">micro_microfacies</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_mineralogy">micro_mineralogy</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_porositydirection">micro_porositydirection</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_porosityprocess">micro_porosityprocess</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_porositysize">micro_porositysize</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_porositytypes">micro_porositytypes</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="micro_texturetypes">micro_texturetypes</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        
+                                        <a name='diagram'><object type="image/svg+xml" id="oneDegreeImg" data="../diagrams/tables/v_export_master.1degree.svg" class="diagram" border="0" align="left"></object></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        
+                                        <a name='diagram'><object type="image/svg+xml" id="oneimpliedDegreeImg" data="../diagrams/tables/v_export_master.implied1degrees.svg" class="diagram" border="0" align="left"></object></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        
+                                        <a name='diagram'><object type="image/svg+xml" id="twoimpliedDegreeImg" data="../diagrams/tables/v_export_master.implied2degrees.svg" class="diagram" border="0" align="left"></object></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-code-o"></i>
+                            <h3 id="ViewDefinition" class="box-title">View Definition</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <textarea id="sql-script-codemirror" name="sql-script-codemirror" rows="" style="display: none;">WITH mega_lithology AS (&#10;         SELECT j.megastructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS mega_lithology&#10;           FROM (jtbl_tlkpmegalithology j&#10;             JOIN tlkpmegalithology l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.megastructureid&#10;        ), mega_megastructureshape AS (&#10;         SELECT j.megastructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS mega_megastructureshape&#10;           FROM (jtbl_tlkpmegamegastructureshape j&#10;             JOIN tlkpmegamegastructureshape l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.megastructureid&#10;        ), mega_microbialitetypes AS (&#10;         SELECT j.megastructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS mega_microbialitetypes&#10;           FROM (jtbl_tlkpmegamicrobialitetypes j&#10;             JOIN tlkpmegamicrobialitetypes l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.megastructureid&#10;        ), macro_branchingmode AS (&#10;         SELECT j.macrostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS macro_branchingmode&#10;           FROM (jtbl_tlkpmacrobranchingmode j&#10;             JOIN tlkpmacrobranchingmode l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.macrostructureid&#10;        ), macro_branchingstyle AS (&#10;         SELECT j.macrostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS macro_branchingstyle&#10;           FROM (jtbl_tlkpmacrobranchingstyle j&#10;             JOIN tlkpmacrobranchingstyle l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.macrostructureid&#10;        ), macro_columnshape AS (&#10;         SELECT j.macrostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS macro_columnshape&#10;           FROM (jtbl_tlkpmacrocolumnshape j&#10;             JOIN tlkpmacrocolumnshape l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.macrostructureid&#10;        ), macro_conicalshapes AS (&#10;         SELECT j.macrostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS macro_conicalshapes&#10;           FROM (jtbl_tlkpmacroconicalshapes j&#10;             JOIN tlkpmacroconicalshapes l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.macrostructureid&#10;        ), macro_divergenceangle AS (&#10;         SELECT j.macrostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS macro_divergenceangle&#10;           FROM (jtbl_tlkpmacrodivergenceangle j&#10;             JOIN tlkpmacrodivergenceangle l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.macrostructureid&#10;        ), macro_domeshape AS (&#10;         SELECT j.macrostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS macro_domeshape&#10;           FROM (jtbl_tlkpmacrodomeshape j&#10;             JOIN tlkpmacrodomeshape l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.macrostructureid&#10;        ), macro_layershape AS (&#10;         SELECT j.macrostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS macro_layershape&#10;           FROM (jtbl_tlkpmacrolayershape j&#10;             JOIN tlkpmacrolayershape l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.macrostructureid&#10;        ), macro_planview AS (&#10;         SELECT j.macrostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS macro_planview&#10;           FROM (jtbl_tlkpmacroplanview j&#10;             JOIN tlkpmacroplanview l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.macrostructureid&#10;        ), macro_shape AS (&#10;         SELECT j.macrostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS macro_shape&#10;           FROM (jtbl_tlkpmacroshape j&#10;             JOIN tlkpmacroshape l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.macrostructureid&#10;        ), meso_alternation AS (&#10;         SELECT j.mesostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS meso_alternation&#10;           FROM (jtbl_tlkpmesoalternation j&#10;             JOIN tlkpmesoalternation l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.mesostructureid&#10;        ), meso_architecture AS (&#10;         SELECT j.mesostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS meso_architecture&#10;           FROM (jtbl_tlkpmesoarchitecture j&#10;             JOIN tlkpmesoarchitecture l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.mesostructureid&#10;        ), meso_clotshape AS (&#10;         SELECT j.mesostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS meso_clotshape&#10;           FROM (jtbl_tlkpmesoclotshape j&#10;             JOIN tlkpmesoclotshape l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.mesostructureid&#10;        ), meso_graintypes AS (&#10;         SELECT j.mesostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS meso_graintypes&#10;           FROM (jtbl_tlkpmesograintypes j&#10;             JOIN tlkpmesograintypes l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.mesostructureid&#10;        ), meso_lampattern AS (&#10;         SELECT j.mesostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS meso_lampattern&#10;           FROM (jtbl_tlkpmesolampattern j&#10;             JOIN tlkpmesolampattern l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.mesostructureid&#10;        ), meso_lamprofile AS (&#10;         SELECT j.mesostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS meso_lamprofile&#10;           FROM (jtbl_tlkpmesolamprofile j&#10;             JOIN tlkpmesolamprofile l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.mesostructureid&#10;        ), meso_lamwaviness AS (&#10;         SELECT j.mesostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS meso_lamwaviness&#10;           FROM (jtbl_tlkpmesolamwaviness j&#10;             JOIN tlkpmesolamwaviness l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.mesostructureid&#10;        ), meso_macrolaminae AS (&#10;         SELECT j.mesostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS meso_macrolaminae&#10;           FROM (jtbl_tlkpmesomacrolaminae j&#10;             JOIN tlkpmesomacrolaminae l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.mesostructureid&#10;        ), meso_oncoidflattening AS (&#10;         SELECT j.mesostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS meso_oncoidflattening&#10;           FROM (jtbl_tlkpmesooncoidflattening j&#10;             JOIN tlkpmesooncoidflattening l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.mesostructureid&#10;        ), meso_oncoids AS (&#10;         SELECT j.mesostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS meso_oncoids&#10;           FROM (jtbl_tlkpmesooncoids j&#10;             JOIN tlkpmesooncoids l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.mesostructureid&#10;        ), meso_oncoidshape AS (&#10;         SELECT j.mesostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS meso_oncoidshape&#10;           FROM (jtbl_tlkpmesooncoidshape j&#10;             JOIN tlkpmesooncoidshape l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.mesostructureid&#10;        ), meso_stackingoverlap AS (&#10;         SELECT j.mesostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS meso_stackingoverlap&#10;           FROM (jtbl_tlkpmesostackingoverlap j&#10;             JOIN tlkpmesostackingoverlap l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.mesostructureid&#10;        ), meso_types AS (&#10;         SELECT j.mesostructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS meso_types&#10;           FROM (jtbl_tlkpmesotypes j&#10;             JOIN tlkpmesotypes l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.mesostructureid&#10;        ), micro_carbonategrains AS (&#10;         SELECT j.microstructureid,&#10;            string_agg(DISTINCT l.textfield, &#39;, &#39;::text ORDER BY l.textfield) AS micro_carbonategrains&#10;           FROM (jtbl_tlkpmicrocarbonategrains j&#10;             JOIN tlkpmicrocarbonategrains l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.microstructureid&#10;        ), micro_cementtypes AS (&#10;         SELECT j.microstructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS micro_cementtypes&#10;           FROM (jtbl_tlkpmicrocementtypes j&#10;             JOIN tlkpmicrocementtypes l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.microstructureid&#10;        ), micro_clasticgrains AS (&#10;         SELECT j.microstructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS micro_clasticgrains&#10;           FROM (jtbl_tlkpmicroclasticgrains j&#10;             JOIN tlkpmicroclasticgrains l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.microstructureid&#10;        ), micro_microfacies AS (&#10;         SELECT j.microstructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS micro_microfacies&#10;           FROM (jtbl_tlkpmicromicrofacies j&#10;             JOIN tlkpmicromicrofacies l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.microstructureid&#10;        ), micro_mineralogy AS (&#10;         SELECT j.microstructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS micro_mineralogy&#10;           FROM (jtbl_tlkpmicromineralogy j&#10;             JOIN tlkpmicromineralogy l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.microstructureid&#10;        ), micro_porositydirection AS (&#10;         SELECT j.microstructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS micro_porositydirection&#10;           FROM (jtbl_tlkpmicroporositydirection j&#10;             JOIN tlkpmicroporositydirection l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.microstructureid&#10;        ), micro_porosityprocess AS (&#10;         SELECT j.microstructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS micro_porosityprocess&#10;           FROM (jtbl_tlkpmicroporosityprocess j&#10;             JOIN tlkpmicroporosityprocess l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.microstructureid&#10;        ), micro_porositysize AS (&#10;         SELECT j.microstructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS micro_porositysize&#10;           FROM (jtbl_tlkpmicroporositysize j&#10;             JOIN tlkpmicroporositysize l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.microstructureid&#10;        ), micro_porositytypes AS (&#10;         SELECT j.microstructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS micro_porositytypes&#10;           FROM (jtbl_tlkpmicroporositytypes j&#10;             JOIN tlkpmicroporositytypes l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.microstructureid&#10;        ), micro_texturetypes AS (&#10;         SELECT j.microstructureid,&#10;            string_agg(DISTINCT (l.textfield)::text, &#39;, &#39;::text ORDER BY (l.textfield)::text) AS micro_texturetypes&#10;           FROM (jtbl_tlkpmicrotexturetypes j&#10;             JOIN tlkpmicrotexturetypes l ON ((j.fieldvalueid &#61; l.valueid)))&#10;          GROUP BY j.microstructureid&#10;        )&#10; SELECT p.projectid AS project_projectid,&#10;    p.projectname AS project_projectname,&#10;    p.principalinvestigator AS project_principalinvestigator,&#10;    p.siteorlocationname AS project_siteorlocationname,&#10;    p.startdate AS project_startdate,&#10;    p.enddate AS project_enddate,&#10;    p.instrumentsused AS project_instrumentsused,&#10;    p.orcid AS project_orcid,&#10;    p.otherteammembers AS project_otherteammembers,&#10;    p.areaofinterest AS project_areaofinterest,&#10;    p.purposeofstudy AS project_purposeofstudy,&#10;    p.fundingsource AS project_fundingsource,&#10;    p.grantid AS project_grantid,&#10;    lp_projecttectonicsetting.textfield AS project_projecttectonicsetting,&#10;    mega.megastructureid AS mega_megastructureid,&#10;    mega.projectid AS mega_projectid,&#10;    mega.citationgroupid AS mega_citationgroupid,&#10;    mega.megasampleid_local AS mega_megasampleid_local,&#10;    mega.megasampleid_sesar AS mega_megasampleid_sesar,&#10;    mega.datesamplecollected AS mega_datesamplecollected,&#10;    mega.fieldbook AS mega_fieldbook,&#10;    mega.fieldbookpage AS mega_fieldbookpage,&#10;    mega.fieldwaypointname AS mega_fieldwaypointname,&#10;    mega.latitude AS mega_latitude,&#10;    mega.longitude AS mega_longitude,&#10;    mega.elevation AS mega_elevation,&#10;    mega.supergroup AS mega_supergroup,&#10;    mega.&quot;group&quot; AS mega_group,&#10;    mega.formation AS mega_formation,&#10;    mega.member AS mega_member,&#10;    mega.timescaleage AS mega_timescaleage,&#10;    mega.geochronage AS mega_geochronage,&#10;    mega.geochronageerror AS mega_geochronageerror,&#10;    mega.geochronagebasis AS mega_geochronagebasis,&#10;    mega.megacomplete AS mega_megacomplete,&#10;    mega.megaismacro AS mega_megaismacro,&#10;    mega.linnaeanname AS mega_linnaeanname,&#10;    mega.notes AS mega_notes,&#10;    mega.section_name AS mega_section_name,&#10;    mega.total_sect_thickness_m AS mega_total_sect_thickness_m,&#10;    mega.sample_height_in_section_m AS mega_sample_height_in_section_m,&#10;    l_mega_buildupinterface.textfield AS mega_megabuildupinterface,&#10;    l_mega_builduptype.textfield AS mega_megabuilduptype,&#10;    l_mega_depositionalsetting.textfield AS mega_megadepositionalsetting,&#10;    l_mega_horizontalscale.textfield AS mega_megahorizontalscale,&#10;    l_mega_initiation.textfield AS mega_megainitiation,&#10;    l_mega_sedinterface.textfield AS mega_megasedinterface,&#10;    l_mega_substrate.textfield AS mega_megasubstrate,&#10;    l_mega_verticalscale.textfield AS mega_megaverticalscale,&#10;    mega.lat_long AS mega_lat_long,&#10;    mega.location_desc AS mega_location_desc,&#10;    l_mega_latlongquality.textfield AS mega_megalat_long_quality,&#10;    mega.collectionid AS mega_collectionid,&#10;    mega_lithology.mega_lithology,&#10;    mega_megastructureshape.mega_megastructureshape,&#10;    mega_microbialitetypes.mega_microbialitetypes,&#10;    macro.macrostructureid AS macro_macrostructureid,&#10;    macro.megastructureid AS macro_megastructureid,&#10;    macro.sampleid AS macro_sampleid,&#10;    macro.macroismeso AS macro_macroismeso,&#10;    macro.sampleid_sesar AS macro_sampleid_sesar,&#10;    macro.macrocomplete AS macro_macrocomplete,&#10;    l_macro_aspectratio.textfield AS macro_macroaspectratio,&#10;    l_macro_attitude.textfield AS macro_macroattitude,&#10;    l_macro_growthvariability.textfield AS macro_macrogrowthvariability,&#10;    l_macro_linkage.textfield AS macro_macrolinkage,&#10;    l_macro_spacing.textfield AS macro_macrospacing,&#10;    macro.macrosampleid_local AS macro_macrosampleid_local,&#10;    macro_branchingmode.macro_branchingmode,&#10;    macro_branchingstyle.macro_branchingstyle,&#10;    macro_columnshape.macro_columnshape,&#10;    macro_conicalshapes.macro_conicalshapes,&#10;    macro_divergenceangle.macro_divergenceangle,&#10;    macro_domeshape.macro_domeshape,&#10;    macro_layershape.macro_layershape,&#10;    macro_planview.macro_planview,&#10;    macro_shape.macro_shape,&#10;    meso.mesostructureid AS meso_mesostructureid,&#10;    meso.macrostructureid AS meso_macrostructureid,&#10;    meso.sampleid AS meso_sampleid,&#10;    meso.sampleid_sesar AS meso_sampleid_sesar,&#10;    meso.mesolamthickness AS meso_mesolamthickness,&#10;    meso.mesowavelength AS meso_mesowavelength,&#10;    meso.notes AS meso_notes,&#10;    meso.infru AS meso_infru,&#10;    meso.researcheranalyst AS meso_researcheranalyst,&#10;    meso.mesocomplete AS meso_mesocomplete,&#10;    l_meso_clothierarchy.textfield AS meso_mesoclothierarchy,&#10;    l_meso_laminainheritance.textfield AS meso_mesolaminainheritance,&#10;    l_meso_latcontinuity.textfield AS meso_mesolatcontinuity,&#10;    l_meso_modalityskewness.textfield AS meso_mesomodalityskewness,&#10;    l_meso_synopticrelief.textfield AS meso_mesosynopticrelief,&#10;    l_meso_walls.textfield AS meso_mesowalls,&#10;    meso.mesosampleid_local AS meso_mesosampleid_local,&#10;    meso_alternation.meso_alternation,&#10;    meso_architecture.meso_architecture,&#10;    meso_clotshape.meso_clotshape,&#10;    meso_graintypes.meso_graintypes,&#10;    meso_lampattern.meso_lampattern,&#10;    meso_lamprofile.meso_lamprofile,&#10;    meso_lamwaviness.meso_lamwaviness,&#10;    meso_macrolaminae.meso_macrolaminae,&#10;    meso_oncoidflattening.meso_oncoidflattening,&#10;    meso_oncoids.meso_oncoids,&#10;    meso_oncoidshape.meso_oncoidshape,&#10;    meso_stackingoverlap.meso_stackingoverlap,&#10;    meso_types.meso_types,&#10;    micro.microstructureid AS micro_microstructureid,&#10;    micro.mesostructureid AS micro_mesostructureid,&#10;    micro.sampleid AS micro_sampleid,&#10;    micro.subsample AS micro_subsample,&#10;    micro.porositypercentest AS micro_porositypercentest,&#10;    micro.cementfilledporosity AS micro_cementfilledporosity,&#10;    micro.micronotes AS micro_micronotes,&#10;    micro.microsampleid_local AS micro_microsampleid_local,&#10;    micro.microsampleid_sesar AS micro_microsampleid_sesar,&#10;    micro.microreferenceimage AS micro_microreferenceimage,&#10;    micro.microcomplete AS micro_microcomplete,&#10;    micro.txtmicronotes AS micro_txtmicronotes,&#10;    l_micro_wentworth.textfield AS micro_microwentworth,&#10;    l_micro_percentclastics.textfield AS micro_micropercentclastics,&#10;    micro_carbonategrains.micro_carbonategrains,&#10;    micro_cementtypes.micro_cementtypes,&#10;    micro_clasticgrains.micro_clasticgrains,&#10;    micro_microfacies.micro_microfacies,&#10;    micro_mineralogy.micro_mineralogy,&#10;    micro_porositydirection.micro_porositydirection,&#10;    micro_porosityprocess.micro_porosityprocess,&#10;    micro_porositysize.micro_porositysize,&#10;    micro_porositytypes.micro_porositytypes,&#10;    micro_texturetypes.micro_texturetypes&#10;   FROM ((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((tbl_projectdata p&#10;     LEFT JOIN tlkpprojecttectonicsetting lp_projecttectonicsetting ON ((p.projecttectonicsettingid &#61; lp_projecttectonicsetting.valueid)))&#10;     LEFT JOIN tbl_megastructuredata mega ON ((p.projectid &#61; mega.projectid)))&#10;     LEFT JOIN tlkpmegabuildupinterface l_mega_buildupinterface ON ((mega.megabuildupinterfaceid &#61; l_mega_buildupinterface.valueid)))&#10;     LEFT JOIN tlkpmegabuilduptype l_mega_builduptype ON ((mega.megabuilduptypeid &#61; l_mega_builduptype.valueid)))&#10;     LEFT JOIN tlkpmegadepositionalsetting l_mega_depositionalsetting ON ((mega.megadepositionalsettingid &#61; l_mega_depositionalsetting.valueid)))&#10;     LEFT JOIN tlkpmegahorizontalscale l_mega_horizontalscale ON ((mega.megahorizontalscaleid &#61; l_mega_horizontalscale.valueid)))&#10;     LEFT JOIN tlkpmegainitiation l_mega_initiation ON ((mega.megainitiationid &#61; l_mega_initiation.valueid)))&#10;     LEFT JOIN tlkpmegasedinterface l_mega_sedinterface ON ((mega.megasedinterfaceid &#61; l_mega_sedinterface.valueid)))&#10;     LEFT JOIN tlkpmegasubstrate l_mega_substrate ON ((mega.megasubstrateid &#61; l_mega_substrate.valueid)))&#10;     LEFT JOIN tlkpmegaverticalscale l_mega_verticalscale ON ((mega.megaverticalscaleid &#61; l_mega_verticalscale.valueid)))&#10;     LEFT JOIN tlkpmegalat_long_quality l_mega_latlongquality ON ((mega.megalat_long_qualityid &#61; l_mega_latlongquality.valueid)))&#10;     LEFT JOIN mega_lithology ON ((mega.megastructureid &#61; mega_lithology.megastructureid)))&#10;     LEFT JOIN mega_megastructureshape ON ((mega.megastructureid &#61; mega_megastructureshape.megastructureid)))&#10;     LEFT JOIN mega_microbialitetypes ON ((mega.megastructureid &#61; mega_microbialitetypes.megastructureid)))&#10;     LEFT JOIN tbl_macrostructuredata macro ON ((mega.megastructureid &#61; macro.megastructureid)))&#10;     LEFT JOIN tlkpmacroaspectratio l_macro_aspectratio ON ((macro.macroaspectratioid &#61; l_macro_aspectratio.valueid)))&#10;     LEFT JOIN tlkpmacroattitude l_macro_attitude ON ((macro.macroattitudeid &#61; l_macro_attitude.valueid)))&#10;     LEFT JOIN tlkpmacrogrowthvariability l_macro_growthvariability ON ((macro.macrogrowthvariabilityid &#61; l_macro_growthvariability.valueid)))&#10;     LEFT JOIN tlkpmacrolinkage l_macro_linkage ON ((macro.macrolinkageid &#61; l_macro_linkage.valueid)))&#10;     LEFT JOIN tlkpmacrospacing l_macro_spacing ON ((macro.macrospacingid &#61; l_macro_spacing.valueid)))&#10;     LEFT JOIN macro_branchingmode ON ((macro.macrostructureid &#61; macro_branchingmode.macrostructureid)))&#10;     LEFT JOIN macro_branchingstyle ON ((macro.macrostructureid &#61; macro_branchingstyle.macrostructureid)))&#10;     LEFT JOIN macro_columnshape ON ((macro.macrostructureid &#61; macro_columnshape.macrostructureid)))&#10;     LEFT JOIN macro_conicalshapes ON ((macro.macrostructureid &#61; macro_conicalshapes.macrostructureid)))&#10;     LEFT JOIN macro_divergenceangle ON ((macro.macrostructureid &#61; macro_divergenceangle.macrostructureid)))&#10;     LEFT JOIN macro_domeshape ON ((macro.macrostructureid &#61; macro_domeshape.macrostructureid)))&#10;     LEFT JOIN macro_layershape ON ((macro.macrostructureid &#61; macro_layershape.macrostructureid)))&#10;     LEFT JOIN macro_planview ON ((macro.macrostructureid &#61; macro_planview.macrostructureid)))&#10;     LEFT JOIN macro_shape ON ((macro.macrostructureid &#61; macro_shape.macrostructureid)))&#10;     LEFT JOIN tbl_mesostructuredata meso ON ((macro.macrostructureid &#61; meso.macrostructureid)))&#10;     LEFT JOIN tlkpmesoclothierarchy l_meso_clothierarchy ON ((meso.mesoclothierarchyid &#61; l_meso_clothierarchy.valueid)))&#10;     LEFT JOIN tlkpmesolaminainheritance l_meso_laminainheritance ON ((meso.mesolaminainheritanceid &#61; l_meso_laminainheritance.valueid)))&#10;     LEFT JOIN tlkpmesolatcontinuity l_meso_latcontinuity ON ((meso.mesolatcontinuityid &#61; l_meso_latcontinuity.valueid)))&#10;     LEFT JOIN tlkpmesomodalityskewness l_meso_modalityskewness ON ((meso.mesomodalityskewnessid &#61; l_meso_modalityskewness.valueid)))&#10;     LEFT JOIN tlkpmesosynopticrelief l_meso_synopticrelief ON ((meso.mesosynopticreliefid &#61; l_meso_synopticrelief.valueid)))&#10;     LEFT JOIN tlkpmesowalls l_meso_walls ON ((meso.mesowallsid &#61; l_meso_walls.valueid)))&#10;     LEFT JOIN meso_alternation ON ((meso.mesostructureid &#61; meso_alternation.mesostructureid)))&#10;     LEFT JOIN meso_architecture ON ((meso.mesostructureid &#61; meso_architecture.mesostructureid)))&#10;     LEFT JOIN meso_clotshape ON ((meso.mesostructureid &#61; meso_clotshape.mesostructureid)))&#10;     LEFT JOIN meso_graintypes ON ((meso.mesostructureid &#61; meso_graintypes.mesostructureid)))&#10;     LEFT JOIN meso_lampattern ON ((meso.mesostructureid &#61; meso_lampattern.mesostructureid)))&#10;     LEFT JOIN meso_lamprofile ON ((meso.mesostructureid &#61; meso_lamprofile.mesostructureid)))&#10;     LEFT JOIN meso_lamwaviness ON ((meso.mesostructureid &#61; meso_lamwaviness.mesostructureid)))&#10;     LEFT JOIN meso_macrolaminae ON ((meso.mesostructureid &#61; meso_macrolaminae.mesostructureid)))&#10;     LEFT JOIN meso_oncoidflattening ON ((meso.mesostructureid &#61; meso_oncoidflattening.mesostructureid)))&#10;     LEFT JOIN meso_oncoids ON ((meso.mesostructureid &#61; meso_oncoids.mesostructureid)))&#10;     LEFT JOIN meso_oncoidshape ON ((meso.mesostructureid &#61; meso_oncoidshape.mesostructureid)))&#10;     LEFT JOIN meso_stackingoverlap ON ((meso.mesostructureid &#61; meso_stackingoverlap.mesostructureid)))&#10;     LEFT JOIN meso_types ON ((meso.mesostructureid &#61; meso_types.mesostructureid)))&#10;     LEFT JOIN tbl_microstructuredata micro ON ((meso.mesostructureid &#61; micro.mesostructureid)))&#10;     LEFT JOIN tlkpmicrowentworth l_micro_wentworth ON ((micro.microwentworthid &#61; l_micro_wentworth.valueid)))&#10;     LEFT JOIN tlkpmicropercentclastics l_micro_percentclastics ON ((micro.micropercentclasticsid &#61; l_micro_percentclastics.valueid)))&#10;     LEFT JOIN micro_carbonategrains ON ((micro.microstructureid &#61; micro_carbonategrains.microstructureid)))&#10;     LEFT JOIN micro_cementtypes ON ((micro.microstructureid &#61; micro_cementtypes.microstructureid)))&#10;     LEFT JOIN micro_clasticgrains ON ((micro.microstructureid &#61; micro_clasticgrains.microstructureid)))&#10;     LEFT JOIN micro_microfacies ON ((micro.microstructureid &#61; micro_microfacies.microstructureid)))&#10;     LEFT JOIN micro_mineralogy ON ((micro.microstructureid &#61; micro_mineralogy.microstructureid)))&#10;     LEFT JOIN micro_porositydirection ON ((micro.microstructureid &#61; micro_porositydirection.microstructureid)))&#10;     LEFT JOIN micro_porosityprocess ON ((micro.microstructureid &#61; micro_porosityprocess.microstructureid)))&#10;     LEFT JOIN micro_porositysize ON ((micro.microstructureid &#61; micro_porositysize.microstructureid)))&#10;     LEFT JOIN micro_porositytypes ON ((micro.microstructureid &#61; micro_porositytypes.microstructureid)))&#10;     LEFT JOIN micro_texturetypes ON ((micro.microstructureid &#61; micro_texturetypes.microstructureid)))&#10;  ORDER BY p.projectid, mega.megastructureid, macro.macrostructureid, meso.mesostructureid, micro.microstructureid;</textarea>
+                            <div style="padding-top: 5px;"><hr></div>
+                            <div class="box box-solid">
+                                <div class="box-header with-border">
+                                    <i class="fa fa-puzzle-piece"></i>
+                                    <h3 class="box-title">Possibly Referenced Tables/Views</h3>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <ul class="list-unstyled">
+                                        <li><a href="jtbl_tlkpmegalithology.html">jtbl_tlkpmegalithology</a></li>
+                                        <li><a href="tlkpmegalithology.html">tlkpmegalithology</a></li>
+                                        <li><a href="jtbl_tlkpmegamegastructureshape.html">jtbl_tlkpmegamegastructureshape</a></li>
+                                        <li><a href="tlkpmegamegastructureshape.html">tlkpmegamegastructureshape</a></li>
+                                        <li><a href="jtbl_tlkpmegamicrobialitetypes.html">jtbl_tlkpmegamicrobialitetypes</a></li>
+                                        <li><a href="tlkpmegamicrobialitetypes.html">tlkpmegamicrobialitetypes</a></li>
+                                        <li><a href="jtbl_tlkpmacrobranchingmode.html">jtbl_tlkpmacrobranchingmode</a></li>
+                                        <li><a href="tlkpmacrobranchingmode.html">tlkpmacrobranchingmode</a></li>
+                                        <li><a href="jtbl_tlkpmacrobranchingstyle.html">jtbl_tlkpmacrobranchingstyle</a></li>
+                                        <li><a href="tlkpmacrobranchingstyle.html">tlkpmacrobranchingstyle</a></li>
+                                        <li><a href="jtbl_tlkpmacrocolumnshape.html">jtbl_tlkpmacrocolumnshape</a></li>
+                                        <li><a href="tlkpmacrocolumnshape.html">tlkpmacrocolumnshape</a></li>
+                                        <li><a href="jtbl_tlkpmacroconicalshapes.html">jtbl_tlkpmacroconicalshapes</a></li>
+                                        <li><a href="tlkpmacroconicalshapes.html">tlkpmacroconicalshapes</a></li>
+                                        <li><a href="jtbl_tlkpmacrodivergenceangle.html">jtbl_tlkpmacrodivergenceangle</a></li>
+                                        <li><a href="tlkpmacrodivergenceangle.html">tlkpmacrodivergenceangle</a></li>
+                                        <li><a href="jtbl_tlkpmacrodomeshape.html">jtbl_tlkpmacrodomeshape</a></li>
+                                        <li><a href="tlkpmacrodomeshape.html">tlkpmacrodomeshape</a></li>
+                                        <li><a href="jtbl_tlkpmacrolayershape.html">jtbl_tlkpmacrolayershape</a></li>
+                                        <li><a href="tlkpmacrolayershape.html">tlkpmacrolayershape</a></li>
+                                        <li><a href="jtbl_tlkpmacroplanview.html">jtbl_tlkpmacroplanview</a></li>
+                                        <li><a href="tlkpmacroplanview.html">tlkpmacroplanview</a></li>
+                                        <li><a href="jtbl_tlkpmacroshape.html">jtbl_tlkpmacroshape</a></li>
+                                        <li><a href="tlkpmacroshape.html">tlkpmacroshape</a></li>
+                                        <li><a href="jtbl_tlkpmesoalternation.html">jtbl_tlkpmesoalternation</a></li>
+                                        <li><a href="tlkpmesoalternation.html">tlkpmesoalternation</a></li>
+                                        <li><a href="jtbl_tlkpmesoarchitecture.html">jtbl_tlkpmesoarchitecture</a></li>
+                                        <li><a href="tlkpmesoarchitecture.html">tlkpmesoarchitecture</a></li>
+                                        <li><a href="jtbl_tlkpmesoclotshape.html">jtbl_tlkpmesoclotshape</a></li>
+                                        <li><a href="tlkpmesoclotshape.html">tlkpmesoclotshape</a></li>
+                                        <li><a href="jtbl_tlkpmesograintypes.html">jtbl_tlkpmesograintypes</a></li>
+                                        <li><a href="tlkpmesograintypes.html">tlkpmesograintypes</a></li>
+                                        <li><a href="jtbl_tlkpmesolampattern.html">jtbl_tlkpmesolampattern</a></li>
+                                        <li><a href="tlkpmesolampattern.html">tlkpmesolampattern</a></li>
+                                        <li><a href="jtbl_tlkpmesolamprofile.html">jtbl_tlkpmesolamprofile</a></li>
+                                        <li><a href="tlkpmesolamprofile.html">tlkpmesolamprofile</a></li>
+                                        <li><a href="jtbl_tlkpmesolamwaviness.html">jtbl_tlkpmesolamwaviness</a></li>
+                                        <li><a href="tlkpmesolamwaviness.html">tlkpmesolamwaviness</a></li>
+                                        <li><a href="jtbl_tlkpmesomacrolaminae.html">jtbl_tlkpmesomacrolaminae</a></li>
+                                        <li><a href="tlkpmesomacrolaminae.html">tlkpmesomacrolaminae</a></li>
+                                        <li><a href="jtbl_tlkpmesooncoidflattening.html">jtbl_tlkpmesooncoidflattening</a></li>
+                                        <li><a href="tlkpmesooncoidflattening.html">tlkpmesooncoidflattening</a></li>
+                                        <li><a href="jtbl_tlkpmesooncoids.html">jtbl_tlkpmesooncoids</a></li>
+                                        <li><a href="tlkpmesooncoids.html">tlkpmesooncoids</a></li>
+                                        <li><a href="jtbl_tlkpmesooncoidshape.html">jtbl_tlkpmesooncoidshape</a></li>
+                                        <li><a href="tlkpmesooncoidshape.html">tlkpmesooncoidshape</a></li>
+                                        <li><a href="jtbl_tlkpmesostackingoverlap.html">jtbl_tlkpmesostackingoverlap</a></li>
+                                        <li><a href="tlkpmesostackingoverlap.html">tlkpmesostackingoverlap</a></li>
+                                        <li><a href="jtbl_tlkpmesotypes.html">jtbl_tlkpmesotypes</a></li>
+                                        <li><a href="tlkpmesotypes.html">tlkpmesotypes</a></li>
+                                        <li><a href="jtbl_tlkpmicrocarbonategrains.html">jtbl_tlkpmicrocarbonategrains</a></li>
+                                        <li><a href="tlkpmicrocarbonategrains.html">tlkpmicrocarbonategrains</a></li>
+                                        <li><a href="jtbl_tlkpmicrocementtypes.html">jtbl_tlkpmicrocementtypes</a></li>
+                                        <li><a href="tlkpmicrocementtypes.html">tlkpmicrocementtypes</a></li>
+                                        <li><a href="jtbl_tlkpmicroclasticgrains.html">jtbl_tlkpmicroclasticgrains</a></li>
+                                        <li><a href="tlkpmicroclasticgrains.html">tlkpmicroclasticgrains</a></li>
+                                        <li><a href="jtbl_tlkpmicromicrofacies.html">jtbl_tlkpmicromicrofacies</a></li>
+                                        <li><a href="tlkpmicromicrofacies.html">tlkpmicromicrofacies</a></li>
+                                        <li><a href="jtbl_tlkpmicromineralogy.html">jtbl_tlkpmicromineralogy</a></li>
+                                        <li><a href="tlkpmicromineralogy.html">tlkpmicromineralogy</a></li>
+                                        <li><a href="jtbl_tlkpmicroporositydirection.html">jtbl_tlkpmicroporositydirection</a></li>
+                                        <li><a href="tlkpmicroporositydirection.html">tlkpmicroporositydirection</a></li>
+                                        <li><a href="jtbl_tlkpmicroporosityprocess.html">jtbl_tlkpmicroporosityprocess</a></li>
+                                        <li><a href="tlkpmicroporosityprocess.html">tlkpmicroporosityprocess</a></li>
+                                        <li><a href="jtbl_tlkpmicroporositysize.html">jtbl_tlkpmicroporositysize</a></li>
+                                        <li><a href="tlkpmicroporositysize.html">tlkpmicroporositysize</a></li>
+                                        <li><a href="jtbl_tlkpmicroporositytypes.html">jtbl_tlkpmicroporositytypes</a></li>
+                                        <li><a href="tlkpmicroporositytypes.html">tlkpmicroporositytypes</a></li>
+                                        <li><a href="jtbl_tlkpmicrotexturetypes.html">jtbl_tlkpmicrotexturetypes</a></li>
+                                        <li><a href="tlkpmicrotexturetypes.html">tlkpmicrotexturetypes</a></li>
+                                        <li><a href="tbl_projectdata.html">tbl_projectdata</a></li>
+                                        <li><a href="tlkpprojecttectonicsetting.html">tlkpprojecttectonicsetting</a></li>
+                                        <li><a href="tbl_megastructuredata.html">tbl_megastructuredata</a></li>
+                                        <li><a href="tlkpmegabuildupinterface.html">tlkpmegabuildupinterface</a></li>
+                                        <li><a href="tlkpmegabuilduptype.html">tlkpmegabuilduptype</a></li>
+                                        <li><a href="tlkpmegadepositionalsetting.html">tlkpmegadepositionalsetting</a></li>
+                                        <li><a href="tlkpmegahorizontalscale.html">tlkpmegahorizontalscale</a></li>
+                                        <li><a href="tlkpmegainitiation.html">tlkpmegainitiation</a></li>
+                                        <li><a href="tlkpmegasedinterface.html">tlkpmegasedinterface</a></li>
+                                        <li><a href="tlkpmegasubstrate.html">tlkpmegasubstrate</a></li>
+                                        <li><a href="tlkpmegaverticalscale.html">tlkpmegaverticalscale</a></li>
+                                        <li><a href="tlkpmegalat_long_quality.html">tlkpmegalat_long_quality</a></li>
+                                        <li><a href="tbl_macrostructuredata.html">tbl_macrostructuredata</a></li>
+                                        <li><a href="tlkpmacroaspectratio.html">tlkpmacroaspectratio</a></li>
+                                        <li><a href="tlkpmacroattitude.html">tlkpmacroattitude</a></li>
+                                        <li><a href="tlkpmacrogrowthvariability.html">tlkpmacrogrowthvariability</a></li>
+                                        <li><a href="tlkpmacrolinkage.html">tlkpmacrolinkage</a></li>
+                                        <li><a href="tlkpmacrospacing.html">tlkpmacrospacing</a></li>
+                                        <li><a href="tbl_mesostructuredata.html">tbl_mesostructuredata</a></li>
+                                        <li><a href="tlkpmesoclothierarchy.html">tlkpmesoclothierarchy</a></li>
+                                        <li><a href="tlkpmesolaminainheritance.html">tlkpmesolaminainheritance</a></li>
+                                        <li><a href="tlkpmesolatcontinuity.html">tlkpmesolatcontinuity</a></li>
+                                        <li><a href="tlkpmesomodalityskewness.html">tlkpmesomodalityskewness</a></li>
+                                        <li><a href="tlkpmesosynopticrelief.html">tlkpmesosynopticrelief</a></li>
+                                        <li><a href="tlkpmesowalls.html">tlkpmesowalls</a></li>
+                                        <li><a href="tbl_microstructuredata.html">tbl_microstructuredata</a></li>
+                                        <li><a href="tlkpmicrowentworth.html">tlkpmicrowentworth</a></li>
+                                        <li><a href="tlkpmicropercentclastics.html">tlkpmicropercentclastics</a></li>
+                                    </ul>
+                                </div><!-- /.box-body -->
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 7.0.2</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>
