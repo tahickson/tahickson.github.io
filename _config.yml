@@ -5,7 +5,7 @@ description: "Documentation for this project"
 source: docs
 
 baseurl: ""
-url: "https://tahickson.github.io"
+url: "https://microbialites.github.io"
 
 permalink: pretty
 markdown: kramdown
