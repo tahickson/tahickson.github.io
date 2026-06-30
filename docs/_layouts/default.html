@@ -3,7 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page.title | default: site.title }}</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
@@ -12,9 +13,9 @@
   </head>
   <body>
     {% include banner.html %}
-    <main class="container">
-      <div class="sidebar">{% include sidebar.html %}</div>
-      <div class="content">{{ content }}</div>
+    <main class="site-shell">
+      {% include sidebar.html %}
+      <article class="content">{{ content }}</article>
     </main>
   </body>
 </html>
