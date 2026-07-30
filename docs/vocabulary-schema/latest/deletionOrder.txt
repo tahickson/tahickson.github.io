@@ -1,0 +1,4 @@
+jtbl_lookup_vocab_terms
+lookup_export_working
+vocab_terms
+tlkpvocab_status
