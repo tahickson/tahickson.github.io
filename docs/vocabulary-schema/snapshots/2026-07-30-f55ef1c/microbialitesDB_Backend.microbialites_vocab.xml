@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<database name="microbialitesDB_Backend" schema="microbialites_vocab" type="PostgreSQL - 17.0 (Debian 17.0-1.pgdg110+1)">
+   <sequences>
+      <sequence increment="1" name="jtbl_lookup_vocab_terms_lookupvocabid_seq" startValue="1"/>
+      <sequence increment="1" name="vocab_terms_vocabtermid_seq" startValue="1"/>
+   </sequences>
+   <tables>
+      <table name="jtbl_lookup_vocab_terms" remarks="" schema="microbialites_vocab" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('microbialites_vocab.jtbl_lookup_vocab_terms_lookupvocabid_seq'::regclass)" digits="0" id="0" name="lookupvocabid" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="'microbialitesdb'::text" digits="0" id="1" name="lookup_schema" nullable="false" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="lookup_table" nullable="false" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="lookup_valueid" nullable="false" remarks="" size="10" type="int4" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="lookup_text" nullable="false" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="vocabtermid" nullable="true" remarks="" size="10" type="int4" typeCode="4">
+            <parent column="vocabtermid" foreignKey="jtbl_lookup_vocab_terms_vocabtermid_fkey" implied="false" onDeleteCascade="false" schema="microbialites_vocab" table="vocab_terms"/>
+         </column>
+         <column autoUpdated="false" defaultValue="'unmapped'::text" digits="0" id="6" name="mapping_status" nullable="true" remarks="" size="2147483647" type="text" typeCode="12">
+            <parent column="status" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" schema="microbialites_vocab" table="tlkpvocab_status"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="notes" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <primaryKey column="lookupvocabid" sequenceNumberInPK="1"/>
+         <index name="jtbl_lookup_vocab_terms_pkey" unique="true">
+            <column ascending="true" name="lookupvocabid"/>
+         </index>
+      </table>
+      <table name="lookup_export_working" numRows="539" remarks="" schema="microbialites_vocab" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="lookup_schema" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="lookup_table" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="lookup_valueid" nullable="true" remarks="" size="10" type="int4" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="lookup_text" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="sort" nullable="true" remarks="" size="10" type="int4" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="include_in_vocab" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="source_short" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="source_page" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="source_figure" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="definition_status" nullable="true" remarks="" size="2147483647" type="text" typeCode="12">
+            <parent column="status" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" schema="microbialites_vocab" table="tlkpvocab_status"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="working_definition" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="notes" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+      </table>
+      <table name="tlkpvocab_status" remarks="" schema="microbialites_vocab" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="status" nullable="false" remarks="" size="2147483647" type="text" typeCode="12">
+            <child column="mapping_status" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" schema="microbialites_vocab" table="jtbl_lookup_vocab_terms"/>
+            <child column="definition_status" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" schema="microbialites_vocab" table="lookup_export_working"/>
+            <child column="definition_status" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" schema="microbialites_vocab" table="vocab_terms"/>
+            <child column="status" foreignKey="fk_vocab_terms_status" implied="false" onDeleteCascade="false" schema="microbialites_vocab" table="vocab_terms"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="description" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <primaryKey column="status" sequenceNumberInPK="1"/>
+         <index name="tlkpvocab_status_pkey" unique="true">
+            <column ascending="true" name="status"/>
+         </index>
+      </table>
+      <table name="vocab_terms" numRows="443" remarks="" schema="microbialites_vocab" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('microbialites_vocab.vocab_terms_vocabtermid_seq'::regclass)" digits="0" id="0" name="vocabtermid" nullable="false" remarks="" size="10" type="serial" typeCode="4">
+            <child column="vocabtermid" foreignKey="jtbl_lookup_vocab_terms_vocabtermid_fkey" implied="false" onDeleteCascade="false" schema="microbialites_vocab" table="jtbl_lookup_vocab_terms"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="term_code" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="preferred_label" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="definition" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="usage_note" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="'provisional'::text" digits="0" id="5" name="status" nullable="true" remarks="" size="2147483647" type="text" typeCode="12">
+            <parent column="status" foreignKey="fk_vocab_terms_status" implied="false" onDeleteCascade="false" schema="microbialites_vocab" table="tlkpvocab_status"/>
+         </column>
+         <column autoUpdated="false" defaultValue="now()" digits="6" id="6" name="createdate" nullable="true" remarks="" size="29" type="timestamp" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="lookup_schema" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="lookup_table" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="lookup_valueid" nullable="true" remarks="" size="10" type="int4" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="lookup_text" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="sort" nullable="true" remarks="" size="10" type="int4" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="include_in_vocab" nullable="true" remarks="" size="1" type="bool" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="13" name="source_short" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="14" name="source_page" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="15" name="source_figure" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="16" name="definition_status" nullable="true" remarks="" size="2147483647" type="text" typeCode="12">
+            <parent column="status" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" schema="microbialites_vocab" table="tlkpvocab_status"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="17" name="notes" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <primaryKey column="vocabtermid" sequenceNumberInPK="1"/>
+         <index name="vocab_terms_pkey" unique="true">
+            <column ascending="true" name="vocabtermid"/>
+         </index>
+         <index name="uq_vocab_terms_lookup_origin" unique="true">
+            <column ascending="true" name="lookup_schema"/>
+            <column ascending="true" name="lookup_table"/>
+            <column ascending="true" name="lookup_valueid"/>
+         </index>
+         <index name="vocab_terms_term_code_key" unique="true">
+            <column ascending="true" name="term_code"/>
+         </index>
+      </table>
+   </tables>
+</database>
